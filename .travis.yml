@@ -1,10 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
-before_install:
-  - npm install -g npm@latest
-install:
-  - npm install --dev
-script:
-  - npm test
-after_success: npm run test:coveralls
+  - 14
+script: 
+  - npm run test
+  - npm run coveralls
