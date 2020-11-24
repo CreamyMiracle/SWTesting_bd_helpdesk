@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Jonuuz/SWTesting_bd_helpdesk.svg?branch=master)](https://travis-ci.org/Jonuuz/SWTesting_bd_helpdesk)
+[![Coverage Status](https://coveralls.io/repos/github/Jonuuz/SWTesting_bd_helpdesk/badge.svg?branch=master)](https://coveralls.io/github/Jonuuz/SWTesting_bd_helpdesk?branch=master)
+
 # Student template
 
 ## Purpose of this repository
