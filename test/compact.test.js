@@ -1,9 +1,19 @@
 import chai from 'chai';
-import compact from '../src/chunk.js';
+import compact from '../src/compact.js';
 const expect = chai.expect;
 
-describe('Chunk', () => {
-    it('creates an array of even length', () => {
-        expect(compact([])).to.be.an('array').that.is.empty;
+describe('Compact', () => {
+    it('removes falsey values from fully falsey array', () => {
+        expect(compact([false, null, 0, '', undefined, NaN])).to.be.an('array').that.is.empty;
+    });
+
+    it('removes falsey values from fully truely array', () => {
+        expect(compact([true, 1])).to.be.an('array');
+        expect(compact([true, 1])).to.have.property('length', 2);
+    });
+
+    it('removes falsey values from array with mixed falsey and truely values', () => {
+        expect(compact([true, 1, false, null, 0, '', undefined, NaN])).to.be.an('array');
+        expect(compact([true, 1, false, null, 0, '', undefined, NaN])).to.have.property('length', 2);
     });
 });
