@@ -23,7 +23,7 @@ describe('ToNumber', () => {
 
     it('converts NaN and null to integer', () => {
         expect(toNumber(null)).to.equal(0);
-        expect(toNumber(NaN)).to.equal(0);
+        expect(toNumber(NaN)).to.equal(NaN);
     });
 
     it('converts integer higher than MAX_INTEGER or lower than -MAX_INTEGER to integer', () => {

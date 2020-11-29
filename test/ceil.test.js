@@ -1,13 +1,15 @@
 import chai from 'chai';
-import capitalize from '../src/capitalize.js';
+import ceil from '../src/ceil.js';
 const expect = chai.expect;
 
 describe('Ceil', () => {
-    it('Ceil', () => {
-        const result = 'Sana';
-        expect(capitalize('sana')).to.equal(result);
-        expect(capitalize('SANA')).to.equal(result);
-        expect(capitalize('sANA')).to.equal(result);
-        expect(capitalize('')).to.equal('');
+    it('Test with valid double number and positive precision', () => {
+        expect(ceil(4.006)).to.equal(5);
+    });
+    it('Test with valid double number and zero precision', () => {
+        expect(ceil(6.004, 2)).to.equal(6.01);
+    });
+    it('Test with valid number and negative precision', () => {
+        expect(ceil(6040, -2)).to.equal(6100);
     });
 });
