@@ -21,7 +21,7 @@ describe('Map', () => {
             map([{ a: 1 }, null, { a: 2 }, undefined, { a: 3 }], item => {
                 return item === null || item === undefined;
             }),
-        ).to.equal([false, true, dalse, true, false]);
+        ).to.equal([false, true, false, true, false]);
     });
 
     it('Test with empty array', () => {
