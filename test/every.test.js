@@ -10,7 +10,7 @@ describe('Every', () => {
 
     it('Check with element known to not match the predicate', () => {
         expect(every([true, 'kana', false], Boolean)).to.be.false;
-        expect(every(['aasi', 'kana', 'kissa'], String)).to.be.false;
+        expect(every(['aasi', 'kana', false], String)).to.be.false;
     });
 
     it('Check with empty array', () => {

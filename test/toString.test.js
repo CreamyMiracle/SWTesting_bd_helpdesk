@@ -9,7 +9,7 @@ describe('To String', () => {
     });
 
     it('converts null or undefined to string', () => {
-        expect(toString(null)).to.be.a('string').that.is.empty;
+        expect(toString(null)).to.be.equal(null);
         expect(toString(undefined)).to.be.a('string').that.is.empty;
     });
 
