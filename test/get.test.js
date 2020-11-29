@@ -14,7 +14,7 @@ describe('Get', () => {
     });
 
     it('Test with different defaultValues', () => {
-        expect(get({ a: [{ b: { c: 3 } }] }, 'a[0].b.c', 'moi')).to.equal('moi');
+        expect(get({ a: [{ b: { c: 3 } }] }, 'a[1].b.c', 'moi')).to.equal('moi');
         expect(get({ a: [{ b: { c: 3 } }] }, ['a', '0', 'b', 'c'], 6)).to.equal(6);
     });
 });

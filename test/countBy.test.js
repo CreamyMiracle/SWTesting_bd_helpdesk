@@ -30,6 +30,6 @@ describe('CountBy', () => {
     });
 
     it('Test with empty collection', () => {
-        expect(countBy([], value => value.active)).to.equal({ true: 0, false: 0 });
+        expect(countBy([], value => value.active)).to.equal({});
     });
 });

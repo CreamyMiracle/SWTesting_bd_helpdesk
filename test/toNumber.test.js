@@ -4,14 +4,14 @@ const expect = chai.expect;
 
 describe('ToNumber', () => {
     it('converts positive value to integer', () => {
-        expect(toNumber(1.1)).to.equal(1);
-        expect(toNumber(1.6)).to.equal(1);
+        expect(toNumber(1.1)).to.equal(1.1);
+        expect(toNumber(1.6)).to.equal(1.6);
         expect(toNumber(4)).to.equal(4);
     });
 
     it('converts negative value to integer', () => {
-        expect(toNumber(-1.1)).to.equal(-1);
-        expect(toNumber(-1.6)).to.equal(-1);
+        expect(toNumber(-1.1)).to.equal(-1.1);
+        expect(toNumber(-1.6)).to.equal(-1.6);
         expect(toNumber('-4')).to.equal(-4);
     });
 
